@@ -68,14 +68,10 @@ module.exports = {
         if (max <= dict[element]){
           max = dict[element];
           mostFreq = element;
-          // multiArr.push(element);
-          // console.log(multiArr);
-          //console.log('mostFreq', mostFreq);
         }
       }
       else {
         dict[element] = 1;
-        //console.log("subsequent", dict)
       }
     });
     for (key in dict){
