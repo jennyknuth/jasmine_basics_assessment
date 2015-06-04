@@ -2,10 +2,10 @@ module.exports = {
 
   grade: function (num) {
     var grade = '',
-     firstDigit = parseInt((num + ''), 10).charAt(0),
-     secondDigit = parseInt((num + ''), 10).charAt(1)
-    console.log(firstDigit)
-    console.log(secondDigit)
+      firstLetter = (num + '').charAt(0),
+      secondLetter = (num + '').charAt(1),
+      firstDigit = parseInt(firstLetter, 10),
+      secondDigit = parseInt(secondLetter, 10)
 
     if (num === 100) {
       grade = 'A+'
