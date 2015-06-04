@@ -6,7 +6,7 @@ var arrEven = [52, 80, 81, 54, 86, 94];
 var arr3 = [82, 92, 75, 91, 92, 89, 95, 100, 86];
 var arrMultiMode = [82, 92, 75, 91, 80, 92, 89, 95, 100, 86, 80];
 var threeMode = [1,1,1,2,2,2,3,3,3, 4, 5];
-var letterMulti = ['A', 'A', 'A', 'B', 'B', 'B', 'C', 'C', 'C',];
+//var letterMulti = ['A', 'A', 'A', 'B', 'B', 'B', 'C', 'C', 'C',];
 
 describe('#grade()', function(){
  it('takes a test score and returns the equivalent letter grade.', function() {
