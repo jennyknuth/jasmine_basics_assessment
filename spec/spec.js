@@ -5,7 +5,8 @@ var arr2 = [52, 80, 80, 86, 94];
 var arrEven = [52, 80, 81, 54, 86, 94];
 var arr3 = [82, 92, 75, 91, 92, 89, 95, 100, 86];
 var arrMultiMode = [82, 92, 75, 91, 80, 92, 89, 95, 100, 86, 80];
-
+var threeMode = [1,1,1,2,2,2,3,3,3, 4, 5];
+var letterMulti = ['A', 'A', 'A', 'B', 'B', 'B', 'C', 'C', 'C',];
 
 describe('#grade()', function(){
  it('takes a test score and returns the equivalent letter grade.', function() {
@@ -39,6 +40,8 @@ describe('#mode()', function(){
  it('take an array of test scores and calculates the mode score.', function() {
    expect(grader.mode(arr3)).toEqual(92);
    expect(grader.mode(arr2)).toEqual(80);
-   //expect(grader.mode(arrMultiMode)).toEqual(80);
+   expect(grader.mode(arrMultiMode)).toEqual([80, 92]);
+   expect(grader.mode(threeMode)).toEqual([1, 2, 3]);
+   //expect(grader.mode(letterMulti)).toEqual(['A', 'B', 'C']);
  });
 });

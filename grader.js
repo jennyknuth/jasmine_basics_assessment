@@ -58,16 +58,19 @@ module.exports = {
 
   mode: function(arr){
     var dict = {};
-    var biggest = 0;
+    var max = 0;
     var mostFreq = -1;
+    var multiArr = [];
+
     arr.forEach(function(element){
       if (dict[element] > 0){
         dict[element] += 1;
-        if (biggest < dict[element]){
-          biggest = dict[element];
+        if (max <= dict[element]){
+          max = dict[element];
           mostFreq = element;
-          console.log("biggest", biggest);
-          console.log('mostFreq', mostFreq);
+          // multiArr.push(element);
+          // console.log(multiArr);
+          //console.log('mostFreq', mostFreq);
         }
       }
       else {
@@ -75,6 +78,17 @@ module.exports = {
         //console.log("subsequent", dict)
       }
     });
-    return mostFreq;
+    for (key in dict){
+      if (dict[key]===max){
+        multiArr.push(parseInt(key));
+      }
+    }
+    if (multiArr.length === 1){
+      return mostFreq;
+    }
+    else {
+
+      return multiArr.sort();
+    }
   }
 }
