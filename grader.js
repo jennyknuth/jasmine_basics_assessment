@@ -35,12 +35,46 @@ module.exports = {
   },
 
   average: function(arr){
+    sum = 0;
+    arr.forEach(function(element){
+      sum += element;
+    });
+    return sum/arr.length;
+  },
 
+  median: function(arr){
+    var index = arr.length;
+    arr.sort();
+    if (arr.length === 1){
+      return arr[0];
+    }
+    if (arr.length % 2 === 0){
+      return (arr[(arr.length/2)-1] + arr[arr.length/2])/2;
+    }
+    else {
+      return arr[(arr.length - 1)/2];
+    }
+  },
 
+  mode: function(arr){
+    var dict = {};
+    var biggest = 0;
+    var mostFreq = -1;
+    arr.forEach(function(element){
+      if (dict[element] > 0){
+        dict[element] += 1;
+        if (biggest < dict[element]){
+          biggest = dict[element];
+          mostFreq = element;
+          console.log("biggest", biggest);
+          console.log('mostFreq', mostFreq);
+        }
+      }
+      else {
+        dict[element] = 1;
+        //console.log("subsequent", dict)
+      }
+    });
+    return mostFreq;
   }
-
-
-
-
-
 }
