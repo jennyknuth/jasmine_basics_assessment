@@ -7,7 +7,7 @@ module.exports = {
       firstDigit = parseInt(firstLetter, 10),
       secondDigit = parseInt(secondLetter, 10)
 
-    if (num === 100) {
+    if (num >= 100) {
       grade = 'A+'
       return grade
     } else if (firstDigit <= 5) {
@@ -25,7 +25,7 @@ module.exports = {
     // add + or -
     if (secondDigit < 4) {
       grade = grade + '-'
-    } else if (secondDigit > 6 && secondDigit <= 9) {
+    } else if (secondDigit > 6) {
       grade = grade + '+'
     } return grade
   },
@@ -55,7 +55,9 @@ module.exports = {
     var max = 0
     var mostFreq = -1
     var multiArr = []
-
+    if (arr.length === 1) {
+      return arr[0]
+    }
     arr.forEach(function (element) {
       if (dict[element] > 0) {
         dict[element] += 1
