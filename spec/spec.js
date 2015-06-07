@@ -17,6 +17,7 @@ describe('#grade()', function(){
    expect(grader.grade(72)).toEqual('C-');
    expect(grader.grade(59)).toEqual('F');
    expect(grader.grade(0)).toEqual('F');
+   expect(grader.grade()).toEqual('please enter a valid grade');
  });
 });
 
@@ -25,7 +26,8 @@ describe('#average()', function(){
    expect(grader.average(arr1)).toEqual(83);
    expect(grader.average(arr2)).toEqual(78.4);
    expect(grader.average(arr3)).toEqual(802 / 9);
-   expect(grader.mode([20])).toEqual(20);
+   expect(grader.average([20])).toEqual(20);
+   expect(grader.average()).toEqual('error: please enter a valid array');
  });
 });
 
@@ -34,6 +36,7 @@ describe('#median()', function(){
    expect(grader.median([20])).toEqual(20);
    expect(grader.median(arr2)).toEqual(80);
    expect(grader.median(arrEven)).toEqual(80.5);
+   expect(grader.median()).toEqual('error: please enter a valid array');
  });
 });
 
@@ -44,6 +47,7 @@ describe('#mode()', function(){
    expect(grader.mode(arr2)).toEqual(80);
    expect(grader.mode(arrMultiMode)).toEqual([80, 92]);
    expect(grader.mode(threeMode)).toEqual([1, 2, 3]);
+   expect(grader.mode()).toEqual('error: please enter a valid array');
    //expect(grader.mode(letterMulti)).toEqual(['A', 'B', 'C']);
  });
 });
