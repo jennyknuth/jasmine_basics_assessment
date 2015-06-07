@@ -1,7 +1,7 @@
 module.exports = {
 
   grade: (num) => {
-    var grade = '',
+    let grade = '',
       firstLetter = (num + '').charAt(0),
       secondLetter = (num + '').charAt(1),
       firstDigit = parseInt(firstLetter, 10),
@@ -31,7 +31,7 @@ module.exports = {
   },
 
   average: (arr) => {
-    var sum = 0
+    let sum = 0
     arr.forEach(element => {
       sum += element
     })
@@ -51,10 +51,10 @@ module.exports = {
   },
 
   mode: (arr) => {
-    var dict = {}
-    var max = 0
-    var mostFreq = -1
-    var multiArr = []
+    let dict = {}
+    let max = 0
+    let mostFreq = -1
+    let multiArr = []
     if (arr.length === 1) {
       return arr[0]
     }
@@ -69,7 +69,7 @@ module.exports = {
         dict[element] = 1
       }
     })
-    for (var key in dict) {
+    for (let key in dict) {
       if (dict[key] === max) {
         multiArr.push(parseInt(key, 10))
       }
