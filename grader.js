@@ -1,6 +1,6 @@
 module.exports = {
 
-  grade: (num) => {
+  grade: (num = -1) => {
     let grade = '',
       firstLetter = (num + '').charAt(0),
       secondLetter = (num + '').charAt(1),
@@ -30,7 +30,7 @@ module.exports = {
     } return grade
   },
 
-  average: (arr) => {
+  average: (arr = 0) => {
     let sum = 0
     arr.forEach(element => {
       sum += element
@@ -38,7 +38,7 @@ module.exports = {
     return sum / arr.length
   },
 
-  median: (arr) => {
+  median: (arr = 0) => {
     arr.sort()
     if (arr.length === 1) {
       return arr[0]
@@ -50,7 +50,7 @@ module.exports = {
     }
   },
 
-  mode: (arr) => {
+  mode: (arr = 0) => {
     let dict = {}
     let max = 0
     let mostFreq = -1
