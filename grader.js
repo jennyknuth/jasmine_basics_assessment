@@ -10,8 +10,8 @@ module.exports = {
     if (num >= 100) {
       grade = 'A+'
       return grade
-    } else if (num < 0){
-      return 'please enter a valid grade';
+    } else if (num < 0) {
+      return 'please enter a valid grade'
     } else if (firstDigit <= 5) {
       grade = 'F'
       return grade
@@ -33,7 +33,7 @@ module.exports = {
   },
 
   average: (arr = 'error') => {
-    if (arr === 'error'){
+    if (arr === 'error') {
       return 'error: please enter a valid array'
     }
     let sum = 0
@@ -44,7 +44,7 @@ module.exports = {
   },
 
   median: (arr = 'error') => {
-    if (arr === 'error'){
+    if (arr === 'error') {
       return 'error: please enter a valid array'
     }
     arr.sort()
@@ -59,7 +59,7 @@ module.exports = {
   },
 
   mode: (arr = 'error') => {
-    if (arr === 'error'){
+    if (arr === 'error') {
       return 'error: please enter a valid array'
     }
     let dict = {}
